@@ -3,7 +3,7 @@
 # PWD, truncated to 20 characters if it is too long
 function collapse_pwd {
     local pwd_truncation_length=20
-    local dir=$(pwd)
+    local dir="$(pwd)"
 
     if $(echo $dir | grep "^$HOME" >>/dev/null)
     then
